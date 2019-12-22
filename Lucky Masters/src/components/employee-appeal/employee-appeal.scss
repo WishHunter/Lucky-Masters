@@ -1,0 +1,86 @@
+.employee-appeal {
+    background-color: rgb(247, 246, 244);
+    padding: 50px 0;
+
+    &__content {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    
+    &__employee {
+        margin-right: 10px;
+        &-img {
+            position: relative;
+            margin-bottom: 30px;
+            border-radius: 50%;
+            background-color: transparentize($color-m-light, .8);
+            width: 320px;
+            height: 320px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                background-color: transparentize($color-m-light, .6);
+                width: 240px;
+                height: 240px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);        
+            }
+
+            img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-caption {
+            font-size: 14px;
+            line-height: 1.5;
+            color: $color-dark;
+            text-align: center;
+        }
+    }
+
+    &__appeal {
+        position: relative;
+        padding-left: 80px;
+
+        &:before {
+            content: '';
+            background-image: url($img+'quote.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 60px;
+            height: 45px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:after {
+            content: '';
+            background-image: url($img+'quote.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 60px;
+            height: 45px;
+            position: absolute;
+            bottom: 0;
+            right: -20px;
+            transform: rotate(180deg);
+        }
+
+        &-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: $color-dark;
+        }
+    }
+}

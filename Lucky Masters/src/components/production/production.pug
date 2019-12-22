@@ -1,0 +1,51 @@
+mixin products(section_name)
+	div(class=section_name).products
+		ul.flex-block
+			li.flex-block__item.products__advantage 
+				a.products__link(href="#")
+					img.products__img(src=$img+"main-product1.png", alt="")
+					p.products__header Дозаторы
+				- var items = ['Ленточные','Шлюзовые','Шнековые','Цепные','Затариватели']
+				.products__list
+					each item in items
+						a.link.products__item(href="#") 
+							span.link__text #{item}	
+
+			li.flex-block__item.products__advantage 
+				a.products__link(href="#")
+					img.products__img(src=$img+"main-product2.png", alt="")
+					p.products__header Транспортеры
+				- var items = ['Ленточные','Цепные','Для отведения мешков']
+				.products__list
+					each item in items
+						a.link.products__item(href="#") 
+							span.link__text #{item}	
+
+			li.flex-block__item.products__advantage 
+				a.products__link(href="#")
+					img.products__img(src=$img+"main-product3.png", alt="")
+					p.products__header Весовые системы
+				- var items = ['Крановые','Напольные','Платформенные и складские',]
+				.products__list
+					each item in items
+						a.link.products__item(href="#") 
+							span.link__text #{item}	
+
+			li.flex-block__item.products__advantage 
+				a.products__link(href="#")
+					img.products__img(src=$img+"main-product4.png", alt="")
+					p.products__header Запайщики
+				- var items = ['Настольные','Импульсные']
+				.products__list
+					each item in items
+						a.link.products__item(href="#") 
+							span.link__text #{item}										
+
+mixin production()
+	.production
+		.container
+			h2 Продукция
+			+products(production__prod)
+			.production__btns
+				a.btn.btn--dark.production__btn(href="#") Скачать прайс
+				a.btn.btn--border.production__btn(href="#") Смотреть весь каталог

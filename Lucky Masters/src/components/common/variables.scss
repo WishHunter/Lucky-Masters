@@ -1,0 +1,32 @@
+//urls
+$media: '/assets/media/';
+$img: $media + 'img/';
+
+//content
+$content: 1140px;
+
+//breakpoints
+
+$desktop: 1280px;
+$laptop: 1024px;
+$tablet: 768px;
+
+//colors
+$color-m: #3d7d7f;
+$color-m-dark: #011f20;
+$color-m-light: #26dfd8;
+$color-m-gray: #9d9d9d;
+$color-light: #fff;
+$color-dark: #000;
+
+//fonts
+$f-primary: 'Inter', Arial, sans-serif;
+$f-second: 'WorkSans', Arial, sans-serif;
+
+$f-reg: 400;
+$f-bold: 700;
+$f-ebold: 800;
+
+// indent
+$hor-padding-mob: 10px;
+$hor-padding-tab: 15px;

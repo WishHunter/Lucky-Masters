@@ -1,0 +1,65 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 51.2em 166.9em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../sprite.png");
+}
+
+
+
+  .icon.architect:before {
+      background-position: 0em 0em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.coins:before {
+      background-position: 0em -51.2em;
+      width: 6em;
+      height: 6em;
+  }
+
+
+
+
+  .icon.diploma:before {
+      background-position: 0em -57.2em;
+      width: 47.6em;
+      height: 47.6em;
+  }
+
+
+
+
+  .icon.email:before {
+      background-position: 0em -104.8em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.phone-call:before {
+      background-position: 0em -156em;
+      width: 10.827em;
+      height: 10.827em;
+  }
+
+
+
+
+

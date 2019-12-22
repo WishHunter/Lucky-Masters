@@ -1,0 +1,100 @@
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    &__slide {
+        position: relative;
+        padding: 70px 0 250px;
+        background-image: url($img + 'heroSlider1.png');
+    }
+    &__header {
+        color: $color-light;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        max-width: 800px;
+    }
+    &__btn {
+        margin: 0 auto;
+        position: relative;
+        z-index: 12;
+    }
+
+    &__nav {
+        position: absolute;
+        left: 50%;
+        bottom: 250px;
+        transform: translateX(-50%);
+        height: 1px;
+        z-index: 11;
+    }
+    &-btn-prev,&-btn-next {
+        bottom: 80px;
+        top: auto;
+        &:after {
+            font-size: 20px;
+            font-weight: bold;
+            color: $color-m-gray;
+            transition: color .2s ease-out;
+        }
+        &:hover::after {
+            color: $color-m-light;
+        }
+    }
+
+    &__pagination {
+        left: 50%;
+        top: 50px;
+        transform: translateX(-50%);
+        
+        .swiper-pagination-bullet {
+            margin: 0 8px;
+            width: 15px;
+            height: 15px;
+            background-color: $color-m-light;
+            opacity: 1;
+            &-active {
+                background-color: $color-m;
+            }
+        }
+    }
+}
+
+.advantages {
+    position: absolute;
+    max-width: $content;
+    width: 100%;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    &__advantage {
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    &__icon {
+        width: 35px;
+        height: 35px;
+        fill: $color-m;
+    }
+
+    &__header {
+        margin: 20px 0;
+        font-size: 22px;
+        color: $color-dark;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 16px;
+        color: $color-dark;
+        line-height: 1.2;       
+    }
+}

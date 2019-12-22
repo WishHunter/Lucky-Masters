@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "localeName": "en",
+    "flag": "gb",
+    "agreementLang": "en",
+    "localeDir": "ltr",
+    "metatitle": "Производство и поставка фасовочного оборудования собственной разработки",
+    "metadescription": "Производство и поставка фасовочного оборудования собственной разработки"
+  },
+
+  "product": {
+    "section": ["packing", "packaging", "automation"],
+    "sectionRUS": ["Фасовка", "Упаковка", "Автоматизация"],
+    "packing": [
+      ["selection_product1.png", "Пищевые продукты"],
+      ["selection_product2.png", "Крупы и сыпучие продукты"],
+      ["selection_product3.png", "Строительные материалы"]
+    ],
+    "packaging": [
+      ["selection_product2.png", "Крупы и сыпучие продукты"],
+      ["selection_product1.png", "Пищевые продукты"],
+      ["selection_product3.png", "Строительные материалы"]
+    ],
+    "automation": [
+      ["selection_product3.png", "Строительные материалы"],
+      ["selection_product1.png", "Пищевые продукты"],
+      ["selection_product2.png", "Крупы и сыпучие продукты"]
+    ]
+  }
+}

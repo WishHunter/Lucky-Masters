@@ -1,0 +1,60 @@
+.footer {
+    padding: 50px 0;
+    
+    &__row {
+        display: flex;
+    } 
+
+    &__col {
+        margin-right: 100px;
+    }
+
+    &__small {
+        font-size: 12px;
+        text-align: center;
+        color: $color-dark;
+    }
+
+    &__policy {
+        font-size: 12px;
+        color: $color-dark;
+    }
+
+    &__list-header {
+        font-size: 18px;
+        line-height: 1;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color-m;
+        margin-bottom: 40px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0;
+            bottom: -24px;
+            width: 70px;
+            height: 4px;
+            background-color: $color-m;
+        }
+    }
+
+    &__link {
+        font-size: 16px;
+        text-decoration: none;
+        margin-bottom: 25px;
+        line-height: 1;
+        color: $color-dark;
+        transition: all .2s ease-out;
+
+        &:hover {
+            color: $color-m;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

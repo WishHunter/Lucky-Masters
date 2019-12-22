@@ -1,0 +1,12 @@
+mixin callback()
+    .callback
+        .container
+            img.callback__manager(src=$img+"manager.png", alt="")
+            h2.callback__header Заказать бесплатную консультацию
+            p.callback__text Наш менеджер презвонит вам в течении нескольких минут
+            form.callback__form(method='post' action="")
+                input.callback__input(type="text" placeholder="Ваше имя")      
+                input.callback__input(type="phone" placeholder="Номер телефона")
+                button.btn.callback__btn Отправить заявку
+            a.link.callback__privacy(href="#") 
+                span.link__text Политика конфиденциальности

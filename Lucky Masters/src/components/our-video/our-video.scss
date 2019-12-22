@@ -1,0 +1,39 @@
+.our-video {
+    padding: 50px 0;
+
+    &__container {
+        display: flex;
+        margin: 60px 0;
+    }
+
+    &__video-block {
+        flex-grow: 1;
+        flex-grow: 33%;
+        max-width: 33%;
+        margin-right: 25px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__video {
+        cursor: pointer;
+        width: 100%;
+    }
+
+    &__text {
+        font-size: 16px;
+        color: $color-dark;  
+        text-align: center;
+        margin-top: 10px;  
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+    }
+    &__btn {
+        margin: 0 10px;
+    }
+}

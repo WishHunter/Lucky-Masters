@@ -1,0 +1,29 @@
+mixin selection()
+    .selection
+        .container
+            h2 Подбор оборудования
+            ul.selection__tabs-header
+                each val, index in $i18n.product.section
+                    if index === 0
+                        li.selection__tab
+                            a.selection__tab-link.js-tab-link.js-tab-active(href="#"+val data-id=val) #{$i18n.product.sectionRUS[index]}
+                    else 
+                        li.selection__tab
+                            a.selection__tab-link.js-tab-link(href="#"+val data-id=val) #{$i18n.product.sectionRUS[index]}
+            
+            .selection__tabs-body
+                each val, index in $i18n.product.section
+                    if index === 0
+                        .selection__tab-content.js-tab-active(id=val)
+                            each prod in $i18n.product[val]
+                                a.selection__product(href="#")
+                                    .selection__product-back
+                                        img.selection__product-img(src=$img+prod[0], alt="")
+                                    p.selection__product-text #{prod[1]}
+                    else 
+                        .selection__tab-content(id=val)
+                            each prod in $i18n.product[val]
+                                a.selection__product(href="#")
+                                    .selection__product-back
+                                        img.selection__product-img(src=$img+prod[0], alt="")
+                                    p.selection__product-text #{prod[1]}                

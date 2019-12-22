@@ -1,0 +1,36 @@
+.nav {
+    background-color: $color-m;
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    &__item {
+        padding: 4px 0;
+        flex-grow: 1;
+        text-align: center;
+        transition: background .2s ease-out;
+        &:hover {
+            background-color: $color-m-dark;
+        }
+
+        &:last-of-type {
+            .nav__link {
+                border: none;
+            }
+        }
+    }
+    &__link {
+        display: block;
+        padding: 12px 0;
+        font-size: 16px;
+        color: $color-light;
+        line-height: 1.2;
+        text-align: center;
+        text-decoration: none; 
+        border-right: 1px solid transparentize($color-m-light, .85);
+    }
+}

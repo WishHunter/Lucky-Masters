@@ -1,0 +1,36 @@
+mixin articles(section_name)
+	div(class=section_name).articles
+		ul.flex-block
+			li.flex-block__item.articles__advantage 
+				img.articles__img(src=$img+"article1.png", alt="")
+				p.articles__header Популярные отраслевые решения
+				- var items = ['Заводы по производству сухих смесей','Пищевое производство','Рециклинг бетона']
+				.articles__list
+					each item in items
+						a.link.articles__item(href="#") 
+							span.link__text #{item}	
+
+			li.flex-block__item.articles__advantage 
+				img.articles__img(src=$img+"article2.png", alt="")
+				p.articles__header Общие сведения о различных видах материалов
+				- var items = ['Твердость материалов по шкале Мооса','Насыпные плотности сыпучих материалов','Коэффициенты трения']
+				.articles__list
+					each item in items
+						a.link.articles__item(href="#") 
+							span.link__text #{item}	
+
+			li.flex-block__item.articles__advantage 
+				img.articles__img(src=$img+"article3.png", alt="")
+				p.articles__header Госты и техническая документация
+				- var items = ['ГОСТ 22688-77 Известь строительная','ГОСТ 8736-93 Песок для строительных работ','ГОСТ 6937-91 Дробилки конусные',]
+				.articles__list
+					each item in items
+						a.link.articles__item(href="#") 
+							span.link__text #{item}	
+
+mixin information()
+	.information
+		.container
+			h2 Полезная информация
+			+articles('information__articles')
+			a.btn.btn--border.information__btn(href="#") Больше статей

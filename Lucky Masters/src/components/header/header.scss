@@ -1,0 +1,45 @@
+.header {
+	padding: 14px 0;
+
+	&__content {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+	}
+
+	&__email {
+		margin-left: auto;
+		font-size: 14px;
+
+		.link__icon {
+			position: relative;
+			top: 2px;
+		}
+	}
+
+	&__number {
+		margin-left: 20px;
+		font-size: 19px;
+		line-height: 1;
+		color: $color-dark;
+		font-weight: bold;
+		text-decoration: none;
+
+		.link__icon {
+			margin-top: -5px;
+		}
+	}
+
+	&__btn {
+		max-width: 140px;
+		margin-left: 20px;
+		padding: 10px 0;
+		border-radius: 4px;
+		font-size: 14px;
+		line-height: 1;
+	}
+}

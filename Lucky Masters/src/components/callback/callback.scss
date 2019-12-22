@@ -1,0 +1,58 @@
+.callback {
+    background-color: $color-m;
+    padding: 50px 0 40px;
+    text-align: center;
+
+    &__header {
+        color: $color-light;
+    }
+
+    &__text {
+        color: $color-light;
+        font-size: 16px
+    }
+
+    &__form {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        margin: 40px 0;
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        flex-grow: 2;
+        padding: 18px;
+        margin-right: 18px;
+        font-size: 16px;
+        line-height: 1;
+        border: none;
+        border-radius: 6px;
+        background-color: $color-light;
+        box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.11);    
+    }
+
+    &__btn {
+        border: none;
+    }
+
+    &__privacy {
+        font-size: 14px;
+        color: transparentize($color-light, .5);
+        span::before {
+            background-color: transparentize($color-light, .5);
+        }
+
+        &:hover {
+            color: $color-light;
+        }
+    }
+
+    &__manager {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        transform: translateX(-50%);
+    }
+}

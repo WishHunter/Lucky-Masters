@@ -1,0 +1,8 @@
+mixin nav()
+    .nav
+        .container
+            - var menu=['О компании', 'Подбор по продукту','Каталог','Новости','Галерея','Контакты']
+            ul.nav__list
+                each link in menu
+                    li.nav__item
+                        a.nav__link(href='#')= link

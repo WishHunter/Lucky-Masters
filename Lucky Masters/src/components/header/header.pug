@@ -1,0 +1,18 @@
+mixin header()
+	header.header
+		.container.header__content
+			a.header__logo(href='#')
+				img.header__logo-img(src=$img +"logo.png", alt="LM")
+			a.link.header__email(href='#')
+				svg.link__icon
+					use(xlink:href= $img + "sprite.svg#email")
+				span.link__text LuckyMasters@mail.ru
+			a.header__number(href='#')
+				svg.link__icon(width='17px' height='18px')
+					use(xlink:href= $img + "sprite.svg#phone-call")
+				span 8 996 003-89-95
+			a.header__number(href='#') 
+				svg.link__icon(width='17px' height='18px')
+					use(xlink:href= $img + "sprite.svg#phone-call")
+				span 8 831 283-03-49
+			a.btn.btn--dark.header__btn.js-scrollTo(href="#" data-scroll=".callback") Заказать звонок

@@ -1,0 +1,52 @@
+.information {
+    padding: 50px 0; 
+
+    &__btn {
+        margin: 0 auto;
+    }
+}
+
+.articles {
+    margin-top: 60px;
+    margin-bottom: 75px;
+
+    &__advantage {
+        flex-basis: 33%;
+        max-width: 33%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    &__header {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        color: $color-dark;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all .2s ease-out;
+    }
+
+    &__link {
+        text-decoration: none;
+        &:hover {
+            .articles__header {
+                color: $color-m;
+            }
+        }
+    }
+
+    &__img {
+        height: 90px;
+    }
+
+    &__list {
+        max-width: 100%;
+    }
+
+    &__item {
+        font-size: 12px;
+        margin: 10px 0;
+        display: block;
+    }
+}    

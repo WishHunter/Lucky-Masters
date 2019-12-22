@@ -1,0 +1,31 @@
+mixin footer()
+    .footer 
+        .container
+            .footer__row
+                .footer__col
+                    img.footer__logo(src=$img+"logo.png", alt="")
+                    p.footer__small Copyright ООО «Лаки Мастерс НН» 2019
+
+                    a.link.footer__policy(href="#") 
+                        span.link__text.footer__policy-text Политика конфиденциальности
+                .footer__col
+                    -var items = ['меню', 'О компании', 'Подбор оборудования', 'Каталог', 'Новости', 'Галерея', 'Контакты']
+                    ul.footer__list
+                        for item, index in items
+                            if index == 0
+                                li.footer__item
+                                    p.footer__list-header #{item}
+                            else        
+                                li.footer__item
+                                    a.footer__link(href="#") #{item}
+                .footer__col
+                    -var items = ['Каталог оборудования', 'Фасовка', 'Упаковка', 'Автоматизация']
+                    ul.footer__list
+                        for item, index in items
+                            if index == 0
+                                li.footer__item
+                                    p.footer__list-header #{item}
+                            else        
+                                li.footer__item
+                                    a.footer__link(href="#") #{item}                    
+                            

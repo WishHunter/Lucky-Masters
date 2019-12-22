@@ -1,0 +1,41 @@
+mixin slider(section_name)
+	div(class=section_name).slider
+
+		.swiper-wrapper.slider__wraper
+			- for (var x = 1; x < 4; x++)
+				.swiper-slide.slider__slide(class='slider__slide--' + x)
+					.container 
+						p.h1-style.slider__header Производство и поставка фасовочного оборудования собственной разработки
+						a.btn.slider__btn(href='') Скачать прайс		
+		.container.slider__nav
+			.swiper-pagination.slider__pagination
+			.swiper-button-prev.slider-btn-prev
+			.swiper-button-next.slider-btn-next
+		
+mixin advantages(section_name)
+	div(class=section_name).advantages
+		ul.flex-block
+			li.flex-block__item.advantages__advantage 
+				svg.advantages__icon
+					use(xlink:href= $img + "sprite.svg#coins")
+				h5.advantages__header Выгодное
+				p.advantages__text соотношение цена-качество
+
+			li.flex-block__item.advantages__advantage 
+				svg.advantages__icon
+					use(xlink:href= $img + "sprite.svg#architect")
+				h5.advantages__header Профессиональный
+				p.advantages__text подход к решению задач
+
+			li.flex-block__item.advantages__advantage 
+				svg.advantages__icon
+					use(xlink:href= $img + "sprite.svg#diploma")
+				h5.advantages__header Гарантия
+				p.advantages__text качества предоставляемых услуг
+
+
+mixin hero()
+	.hero
+		+slider('hero__slider')
+		+advantages('hero__advantages')
+			

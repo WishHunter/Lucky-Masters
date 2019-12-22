@@ -1,0 +1,40 @@
+include mixins
+
+doctype html
+html()
+  head
+    title LuckyMaster
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name="description" content= $i18n.meta.metadescription)
+    meta(property='og:site_name', content='Lucky Master')
+    meta(property='og:title', content= $i18n.meta.metatitle)
+    meta(property='og:description', content= $i18n.meta.metadescription)
+    meta(property='og:type', content='website')
+    meta(property='og:image', content=$img+'heroSlider1.png')
+    meta(property='og:image:type', content='image/jpg')
+    meta(property='twitter:image', content=$img+'heroSlider1.png')
+    meta(property='twitter:card', content='summary')
+    meta(property='twitter:title', content= $i18n.meta.metatitle)
+    meta(property='twitter:description', content= $i18n.meta.metadescription)
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic")
+    link(rel="stylesheet", href=$project + "css/style.css")
+
+  body
+    +header()
+    +nav()
+    +hero()
+    +selection()
+    +callback()
+    +production()
+    +employee-appeal()
+    +certificates()
+    +callback()
+    +our-video()
+    +information()
+    +contacts()
+    +footer()
+
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=ca918320-3a18-406b-a4cd-c9f4ee2acd55&lang=ru_RU" type="text/javascript")
+    script(src=$project + 'js/scripts-min.js')

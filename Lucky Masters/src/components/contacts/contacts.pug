@@ -1,0 +1,25 @@
+mixin contacts()
+	.contacts
+		.container.contacts__container
+			.contacts__map#contacts__map
+			.contacts__block-contact
+				p.contacts__adress 
+					| ООО ПК «Лаки Мастерс НН»
+					br
+					| Юр. адрес: 607684, Нижегородская область,
+					br
+					| Кстовский район, д. Крутая, ул. Приозёрная, дом 1а
+				a.link.contacts__email(href='#')
+					svg.link__icon
+						use(xlink:href= $img + "sprite.svg#email")
+					span.link__text LuckyMasters@mail.ru
+				.contacts__numbers
+					a.contacts__number(href='#')
+						svg.link__icon(width='17px' height='18px')
+							use(xlink:href= $img + "sprite.svg#phone-call")
+						span 8 996 003-89-95
+					a.contacts__number(href='#') 
+						svg.link__icon(width='17px' height='18px')
+							use(xlink:href= $img + "sprite.svg#phone-call")
+						span 8 831 283-03-49
+				a.btn.contacts__btn.js-scrollTo(href="#" data-scroll=".callback") Заказать звонок       

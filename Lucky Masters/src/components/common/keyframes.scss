@@ -1,0 +1,19 @@
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 rgba(255, 235, 60, .5);
+  }
+  to {
+    box-shadow: 0 0 0 30px rgba(255, 235, 60, 0);
+  }
+}
+
+@keyframes floatBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
