@@ -1,25 +1,52 @@
 .our-video {
     padding: 50px 0;
+    overflow: hidden;
 
     &__container {
         display: flex;
+        justify-content: space-between;
         margin: 60px 0;
+
+        
+    }
+
+    &__slider--mob {
+        @media (max-width: $tablet) {
+            position: relative;
+        }
+    }
+
+    &__pagination {
+        display: none;
+        @media (max-width: $desktop) {
+            display: block;
+            bottom: -30px;
+        }
     }
 
     &__video-block {
         flex-grow: 1;
-        flex-grow: 33%;
-        max-width: 33%;
-        margin-right: 25px;
+        flex-basis: 32%;
+        max-width: 32%;
 
-        &:last-of-type {
-            margin-right: 0;
+        @media (max-width: $desktop) {
+            max-width: none;
+            flex-basis: auto;
+            margin: 0;
         }
     }
 
     &__video {
         cursor: pointer;
         width: 100%;
+        @media (max-width: $desktop) {
+            display: block;
+            width: 350px;
+            margin: 0 auto;
+        }
+        @media (max-width: $tablet) {
+            width: 290px;
+        }
     }
 
     &__text {
@@ -29,11 +56,29 @@
         margin-top: 10px;  
     }
 
+    &-btn-prev, &-btn-next {
+        display: none;
+        &:after {
+            color: $color-m;
+        }
+        @media (max-width: $desktop) {
+            display: block;
+        }
+    }
+
     &__btns {
         display: flex;
         justify-content: center;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
     }
     &__btn {
         margin: 0 10px;
+
+        @media (max-width: $tablet) {
+            margin: 5px auto;
+        }
     }
 }

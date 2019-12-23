@@ -1,5 +1,5 @@
 mixin selection()
-    .selection
+    section.selection
         .container
             h2 Подбор оборудования
             ul.selection__tabs-header
@@ -15,15 +15,25 @@ mixin selection()
                 each val, index in $i18n.product.section
                     if index === 0
                         .selection__tab-content.js-tab-active(id=val)
-                            each prod in $i18n.product[val]
-                                a.selection__product(href="#")
-                                    .selection__product-back
-                                        img.selection__product-img(src=$img+prod[0], alt="")
-                                    p.selection__product-text #{prod[1]}
+                            .swiper-wrapper.selection__tab-wrapper
+                                each prod in $i18n.product[val]
+                                    a.swiper-slide.selection__product(href="#")
+                                        .selection__product-back
+                                            img.selection__product-img(src=$img+prod[0], alt="")
+                                        p.selection__product-text #{prod[1]}
+                            .selection__tab-nav
+                                .swiper-pagination.selection__tab__pagination
+                                .swiper-button-prev.selection__tab-btn-prev
+                                .swiper-button-next.selection__tab-btn-next
                     else 
                         .selection__tab-content(id=val)
-                            each prod in $i18n.product[val]
-                                a.selection__product(href="#")
-                                    .selection__product-back
-                                        img.selection__product-img(src=$img+prod[0], alt="")
-                                    p.selection__product-text #{prod[1]}                
+                            .swiper-wrapper.selection__tab-wrapper
+                                each prod in $i18n.product[val]
+                                    a.swiper-slide.selection__product(href="#")
+                                        .selection__product-back
+                                            img.selection__product-img(src=$img+prod[0], alt="")
+                                        p.selection__product-text #{prod[1]}
+                            .selection__tab-nav
+                                .swiper-pagination.selection__tab__pagination
+                                .swiper-button-prev.selection__tab-btn-prev
+                                .swiper-button-next.selection__tab-btn-next                       

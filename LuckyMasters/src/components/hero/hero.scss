@@ -5,10 +5,20 @@
 
 .slider {
     position: relative;
+    overflow: hidden;
     &__slide {
         position: relative;
         padding: 70px 0 250px;
         background-image: url($img + 'heroSlider1.png');
+
+        @media (max-width: $desktop) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @media (max-width: $tablet) {
+            padding: 110px 5px;
+        }
     }
     &__header {
         color: $color-light;
@@ -27,8 +37,15 @@
         left: 50%;
         bottom: 250px;
         transform: translateX(-50%);
-        height: 1px;
+        height: 30px;
         z-index: 11;
+
+        @media (max-width: $tablet) {
+            bottom: 40px;
+            transform: none;
+            left: 0;
+            z-index: 14;
+        }
     }
     &-btn-prev,&-btn-next {
         bottom: 80px;
@@ -41,6 +58,10 @@
         }
         &:hover::after {
             color: $color-m-light;
+        }
+
+        @media (max-width: $tablet) {
+            display: none;
         }
     }
 
@@ -59,6 +80,10 @@
                 background-color: $color-m;
             }
         }
+
+        @media (max-width: $tablet) {
+            top: 0;
+        }
     }
 }
 
@@ -71,9 +96,20 @@
     transform: translateX(-50%);
     z-index: 10;
 
+    @media (max-width: $tablet) {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: none;
+    }
+
     &__advantage {
         text-align: center;
         padding: 30px 0;
+
+        @media (max-width: $desktop) {
+            padding: 30px 10px;
+        }
     }
 
     &__icon {
@@ -89,6 +125,10 @@
         font-weight: bold;
         text-transform: uppercase;
         line-height: 1.2;
+
+        @media (max-width: $desktop) {
+            font-size: 18px;
+        }
     }
 
     &__text {

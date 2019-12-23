@@ -10,9 +10,16 @@ mixin header()
 			a.header__number(href='#')
 				svg.link__icon(width='17px' height='18px')
 					use(xlink:href= $img + "sprite.svg#phone-call")
-				span 8 996 003-89-95
+				span 8 920 042-25-88
 			a.header__number(href='#') 
 				svg.link__icon(width='17px' height='18px')
 					use(xlink:href= $img + "sprite.svg#phone-call")
 				span 8 831 283-03-49
-			a.btn.btn--dark.header__btn.js-scrollTo(href="#" data-scroll=".callback") Заказать звонок
+			a.btn.btn--dark.header__btn.js-scrollTo(href="#" data-scroll=".callback") 
+				svg.header__btn-icon(width='17px' height='18px')
+					use(xlink:href= $img + "sprite.svg#phone-call")
+				span Заказать звонок
+			a.header__burger.js-open-menu(href="#")
+				span
+				span
+				span

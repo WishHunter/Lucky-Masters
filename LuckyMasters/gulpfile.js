@@ -144,6 +144,6 @@ gulp.task('watch', function () {
 });
 
 // Build task compile sass and twig.
-gulp.task('build', gulp.series('webp', 'sass', 'pug', 'js', 'img'));
+gulp.task('build', gulp.series('webp', 'svg', 'sass', 'pug', 'js', 'img'));
 
 gulp.task('default', gulp.parallel('browser-sync', 'watch'));

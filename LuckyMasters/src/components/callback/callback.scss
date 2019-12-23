@@ -18,6 +18,9 @@
         display: flex;
         margin: 40px 0;
         width: 100%;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
     }
 
     &__input {
@@ -31,10 +34,29 @@
         border-radius: 6px;
         background-color: $color-light;
         box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.11);    
+        color: $color-m-dark;
+        transition: all .2s ease-out;
+        
+        &:focus {
+            outline: none;
+            box-shadow: 0px 7px 13px 0px $color-m-light;
+        }
+
+        @media (max-width: $tablet) {
+            margin: 0 auto;
+            margin-bottom: 10px;
+            max-width: 320px;
+        }
     }
 
     &__btn {
         border: none;
+
+        @media (max-width: $tablet) {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 320px;
+        }
     }
 
     &__privacy {
@@ -54,5 +76,12 @@
         bottom: -40px;
         left: 0;
         transform: translateX(-50%);
+
+        @media (max-width: $desktop) {
+            transform: translateX(-40%);
+        }
+        @media (max-width: $tablet) {
+            display: none;
+        }
     }
 }

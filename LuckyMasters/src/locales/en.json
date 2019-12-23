@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Join Finex PRO contest",
+    "localeName": "en",
+    "flag": "gb",
+    "agreementLang": "en",
+    "localeDir": "ltr",
+    "metatitle": "Take part in Finex PRO contest!Trade Forex and win iPhone 11 Pro",
+    "metadescription": "Be the lucky winner to get an Apple! The number of winners is unlimited. Meet all the necessary requirements during the 4 months of the contest and get a brand new iPhone."
+  },
+
+  "product": {
+    "section": ["packing", "packaging", "automation"],
+    "sectionRUS": ["Фасовка", "Упаковка", "Автоматизация"],
+    "packing": [
+      ["selection_product1.png", "Пищевые продукты"],
+      ["selection_product2.png", "Крупы и сыпучие продукты"],
+      ["selection_product3.png", "Строительные материалы"]
+    ],
+    "packaging": [
+      ["selection_product2.png", "Крупы и сыпучие продукты"],
+      ["selection_product1.png", "Пищевые продукты"],
+      ["selection_product3.png", "Строительные материалы"]
+    ],
+    "automation": [
+      ["selection_product3.png", "Строительные материалы"],
+      ["selection_product1.png", "Пищевые продукты"],
+      ["selection_product2.png", "Крупы и сыпучие продукты"]
+    ]
+  }
+}

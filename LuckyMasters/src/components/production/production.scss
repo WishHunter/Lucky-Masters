@@ -1,12 +1,24 @@
 .production {
     padding: 60px 0;
 
+    @media (max-width: $tablet) {
+        border-top: 2px solid transparentize($color-m-light, .85);
+    }
+
     &__btns {
         display: flex;
         justify-content: center;
+
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
     }
     &__btn {
         margin: 0 10px;
+
+        @media (max-width: $tablet) {
+            margin: 5px auto;
+        }
     }
 }
 
@@ -14,11 +26,41 @@
     margin-top: 60px;
     margin-bottom: 75px;
 
+    @media (max-width: $tablet) {
+        margin-top: 40px;
+    }
+
+    &__flex {
+        @media (max-width: $desktop) {
+           flex-wrap: wrap;
+           padding: 10px; 
+        }
+    }
+
     &__advantage {
         flex-basis: 25%;
         max-width: 25%;
         padding: 30px 0 20px;
         text-align: center;
+
+        @media (max-width: $desktop) {
+            flex-basis: 50%;
+            max-width: 50%;
+            
+            &:nth-of-type(2) {
+                border: none;
+            }
+
+            &:nth-of-type(n+3) {
+                border-top: 1px solid transparentize($color-m-light, .85);
+            }
+        }
+
+        @media (max-width: $tablet) {
+            flex-basis: 100%;
+            max-width: 100%;
+            border: none !important;
+        }
     }
 
     &__header {
@@ -35,6 +77,11 @@
             display: inline-block;
             margin-left: 10px;
             color: $color-m;
+
+            @media (max-width: $desktop) {
+                margin-left: 5px;
+                vertical-align: middle;
+            }
         }
     }
 

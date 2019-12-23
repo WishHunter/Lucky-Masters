@@ -8,9 +8,19 @@
         height: 100%;
     }
 
+
+    .ymaps-2-1-75-map {
+        @media (max-width: $tablet) {
+            height: 100% !important;
+        }
+    }
     &__container {
         position: static;
         padding: 90px 0;
+
+        @media (max-width: $tablet) {
+            padding: 0 0 285px;
+        }
     }
 
     &__block-contact {
@@ -19,6 +29,12 @@
         border-radius: 10px;
         background-color: transparentize($color-m, .1);
         width: 545px;
+
+        @media (max-width: $tablet) {
+            width: calc(100% - 20px);
+            margin-left: 10px;
+            padding: 10px 20px;
+        }
     }
 
     &__adress {
@@ -55,6 +71,9 @@
 
         .link__icon {
             margin-top: -5px;
+        }
+        @media (max-width: $tablet) {
+            display: block;
         }
 
         &:hover {

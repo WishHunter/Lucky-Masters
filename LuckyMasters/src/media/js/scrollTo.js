@@ -7,8 +7,10 @@
    });
    
    function scrollTo(elem) {
-    let block = document.querySelector(elem.dataset.scroll);
-    console.log(block);
+    let block;
+    document.querySelectorAll(elem.dataset.scroll).forEach(el => {
+        block = el;
+    });  
     block.scrollIntoView({behavior: "smooth", block: "start"});
    }
 })()

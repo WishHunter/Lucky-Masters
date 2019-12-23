@@ -1,6 +1,6 @@
 mixin products(section_name)
 	div(class=section_name).products
-		ul.flex-block
+		ul.flex-block.products__flex
 			li.flex-block__item.products__advantage 
 				a.products__link(href="#")
 					img.products__img(src=$img+"main-product1.png", alt="")
@@ -42,7 +42,7 @@ mixin products(section_name)
 							span.link__text #{item}										
 
 mixin production()
-	.production
+	section.production
 		.container
 			h2 Продукция
 			+products(production__prod)
