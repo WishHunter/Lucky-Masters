@@ -30,9 +30,12 @@
           </svg><span>8 920 042-25-88</span></a><a class="header__number" href="#"> 
           <svg class="link__icon" width="17px" height="18px">
             <use xlink:href="assets/media/img/sprite.svg#phone-call"></use>
-          </svg><span>8 831 283-03-49</span></a><a class="btn btn--dark header__btn js-scrollTo" href="#" data-scroll=".callback">Заказать звонок</a></div>
+          </svg><span>8 831 283-03-49</span></a><a class="btn btn--dark header__btn js-scrollTo" href="#" data-scroll=".callback"> 
+          <svg class="header__btn-icon" width="17px" height="18px">
+            <use xlink:href="assets/media/img/sprite.svg#phone-call"></use>
+          </svg><span>Заказать звонок</span></a><a class="header__burger js-open-menu" href="#"><span></span><span></span><span></span></a></div>
     </header>
-    <div class="nav">
+    <section class="nav">
       <div class="container">
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
@@ -43,8 +46,8 @@
           <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
         </ul>
       </div>
-    </div>
-    <div class="hero">
+    </section>
+    <section class="hero">
       <div class="hero__slider slider">
         <div class="swiper-wrapper slider__wraper">
           <div class="swiper-slide slider__slide slider__slide--1">
@@ -94,8 +97,8 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="selection">
+    </section>
+    <section class="selection">
       <div class="container">
         <h2>Подбор оборудования</h2>
         <ul class="selection__tabs-header">
@@ -104,45 +107,68 @@
           <li class="selection__tab"><a class="selection__tab-link js-tab-link" href="#automation" data-id="automation">Автоматизация</a></li>
         </ul>
         <div class="selection__tabs-body">
-          <div class="selection__tab-content js-tab-active" id="packing"><a class="selection__product" href="#">
-              <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product1.png" alt=""/></div>
-              <p class="selection__product-text">Пищевые продукты</p></a><a class="selection__product" href="#">
-              <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product2.png" alt=""/></div>
-              <p class="selection__product-text">Крупы и сыпучие продукты</p></a><a class="selection__product" href="#">
-              <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product3.png" alt=""/></div>
-              <p class="selection__product-text">Строительные материалы</p></a>
+          <div class="selection__tab-content js-tab-active" id="packing">
+            <div class="swiper-wrapper selection__tab-wrapper"><a class="swiper-slide selection__product" href="#">
+                <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product1.png" alt=""/></div>
+                <p class="selection__product-text">Пищевые продукты</p></a><a class="swiper-slide selection__product" href="#">
+                <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product2.png" alt=""/></div>
+                <p class="selection__product-text">Крупы и сыпучие продукты</p></a><a class="swiper-slide selection__product" href="#">
+                <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product3.png" alt=""/></div>
+                <p class="selection__product-text">Строительные материалы</p></a>
+            </div>
+            <div class="selection__tab-nav">
+              <div class="swiper-pagination selection__tab__pagination"></div>
+              <div class="swiper-button-prev selection__tab-btn-prev"></div>
+              <div class="swiper-button-next selection__tab-btn-next"></div>
+            </div>
           </div>
-          <div class="selection__tab-content" id="packaging"><a class="selection__product" href="#">
-              <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product2.png" alt=""/></div>
-              <p class="selection__product-text">Крупы и сыпучие продукты                </p></a><a class="selection__product" href="#">
-              <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product1.png" alt=""/></div>
-              <p class="selection__product-text">Пищевые продукты                </p></a><a class="selection__product" href="#">
-              <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product3.png" alt=""/></div>
-              <p class="selection__product-text">Строительные материалы                </p></a>
+          <div class="selection__tab-content" id="packaging">
+            <div class="swiper-wrapper selection__tab-wrapper"><a class="swiper-slide selection__product" href="#">
+                <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product2.png" alt=""/></div>
+                <p class="selection__product-text">Крупы и сыпучие продукты</p></a><a class="swiper-slide selection__product" href="#">
+                <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product1.png" alt=""/></div>
+                <p class="selection__product-text">Пищевые продукты</p></a><a class="swiper-slide selection__product" href="#">
+                <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product3.png" alt=""/></div>
+                <p class="selection__product-text">Строительные материалы</p></a>
+            </div>
+            <div class="selection__tab-nav">
+              <div class="swiper-pagination selection__tab__pagination"></div>
+              <div class="swiper-button-prev selection__tab-btn-prev"></div>
+              <div class="swiper-button-next selection__tab-btn-next">                      </div>
+            </div>
           </div>
-          <div class="selection__tab-content" id="automation"><a class="selection__product" href="#">
-              <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product3.png" alt=""/></div>
-              <p class="selection__product-text">Строительные материалы                </p></a><a class="selection__product" href="#">
-              <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product1.png" alt=""/></div>
-              <p class="selection__product-text">Пищевые продукты                </p></a><a class="selection__product" href="#">
-              <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product2.png" alt=""/></div>
-              <p class="selection__product-text">Крупы и сыпучие продукты                </p></a>
+          <div class="selection__tab-content" id="automation">
+            <div class="swiper-wrapper selection__tab-wrapper"><a class="swiper-slide selection__product" href="#">
+                <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product3.png" alt=""/></div>
+                <p class="selection__product-text">Строительные материалы</p></a><a class="swiper-slide selection__product" href="#">
+                <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product1.png" alt=""/></div>
+                <p class="selection__product-text">Пищевые продукты</p></a><a class="swiper-slide selection__product" href="#">
+                <div class="selection__product-back"><img class="selection__product-img" src="assets/media/img/selection_product2.png" alt=""/></div>
+                <p class="selection__product-text">Крупы и сыпучие продукты</p></a>
+            </div>
+            <div class="selection__tab-nav">
+              <div class="swiper-pagination selection__tab__pagination"></div>
+              <div class="swiper-button-prev selection__tab-btn-prev"></div>
+              <div class="swiper-button-next selection__tab-btn-next">                      </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+    <div class="mobile-only">
+      <section class="callback">
+        <div class="container"><img class="callback__manager" src="assets/media/img/manager.png" alt=""/>
+          <h2 class="callback__header">Заказать бесплатную консультацию</h2>
+          <p class="callback__text">Наш менеджер презвонит вам в течении нескольких минут</p>
+          <form class="callback__form" method="post" action="">
+            <input class="callback__input" type="text" placeholder="Ваше имя"/>
+            <input class="callback__input" type="phone" placeholder="Номер телефона"/>
+            <button class="btn callback__btn">Отправить заявку</button>
+          </form><a class="link callback__privacy" href="#"> <span class="link__text">Политика конфиденциальности</span></a>
+        </div>
+      </section>
     </div>
-    <div class="callback">
-      <div class="container"><img class="callback__manager" src="assets/media/img/manager.png" alt=""/>
-        <h2 class="callback__header">Заказать бесплатную консультацию</h2>
-        <p class="callback__text">Наш менеджер презвонит вам в течении нескольких минут</p>
-        <form class="callback__form" method="post" action="">
-          <input class="callback__input" type="text" placeholder="Ваше имя"/>
-          <input class="callback__input" type="phone" placeholder="Номер телефона"/>
-          <button class="btn callback__btn">Отправить заявку</button>
-        </form><a class="link callback__privacy" href="#"> <span class="link__text">Политика конфиденциальности</span></a>
-      </div>
-    </div>
-    <div class="production">
+    <section class="production">
       <div class="container">
         <h2>Продукция</h2>
         <div class="products">
@@ -171,8 +197,8 @@
         </div>
         <div class="production__btns"><a class="btn btn--dark production__btn" href="#">Скачать прайс</a><a class="btn btn--border production__btn" href="#">Смотреть весь каталог</a></div>
       </div>
-    </div>
-    <div class="employee-appeal">
+    </section>
+    <section class="employee-appeal">
       <div class="container">
         <div class="employee-appeal__content">
           <div class="employee-appeal__employee">
@@ -203,11 +229,11 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="certificates">
-      <div class="container"><img class="certificates__img" src="assets/media/img/certificate.png" alt=""/></div>
-    </div>
-    <div class="callback">
+    </section>
+    <section class="certificates">
+      <div class="container"><img class="certificates__img" src="assets/media/img/certificate.png" alt=""/><img class="certificates__img" src="assets/media/img/certificate2.png" alt=""/></div>
+    </section>
+    <section class="callback">
       <div class="container"><img class="callback__manager" src="assets/media/img/manager.png" alt=""/>
         <h2 class="callback__header">Заказать бесплатную консультацию</h2>
         <p class="callback__text">Наш менеджер презвонит вам в течении нескольких минут</p>
@@ -217,8 +243,8 @@
           <button class="btn callback__btn">Отправить заявку</button>
         </form><a class="link callback__privacy" href="#"> <span class="link__text">Политика конфиденциальности</span></a>
       </div>
-    </div>
-    <div class="our-video">
+    </section>
+    <section class="our-video">
       <div class="container">
         <h2>Наше видео</h2>
         <div class="our-video__slider--mob">
@@ -237,14 +263,13 @@
             </div>
           </div>
           <div class="our-video__nav">
-            <div class="swiper-button-prev our-video-btn-prev"></div>
-            <div class="swiper-button-next our-video-btn-next"></div>
+            <div class="swiper-pagination our-video__pagination"></div>
           </div>
         </div>
         <div class="our-video__btns"><a class="btn btn--dark our-video__btn" href="#">Скачать прайс</a><a class="btn btn--border our-video__btn" href="#">Смотреть весь каталог</a></div>
       </div>
-    </div>
-    <div class="information">
+    </section>
+    <section class="information">
       <div class="container">
         <h2>Полезная информация</h2>
         <div class="information__articles articles">
@@ -267,8 +292,8 @@
           </ul>
         </div><a class="btn btn--border information__btn" href="#">Больше статей</a>
       </div>
-    </div>
-    <div class="contacts">
+    </section>
+    <section class="contacts">
       <div class="container contacts__container">
         <div class="contacts__map" id="contacts__map"></div>
         <div class="contacts__block-contact">
@@ -280,14 +305,14 @@
           <div class="contacts__numbers"><a class="contacts__number" href="#">
               <svg class="link__icon" width="17px" height="18px">
                 <use xlink:href="assets/media/img/sprite.svg#phone-call"></use>
-              </svg><span>8 996 003-89-95</span></a><a class="contacts__number" href="#"> 
+              </svg><span>8 920 042-25-88</span></a><a class="contacts__number" href="#"> 
               <svg class="link__icon" width="17px" height="18px">
                 <use xlink:href="assets/media/img/sprite.svg#phone-call"></use>
               </svg><span>8 831 283-03-49</span></a></div><a class="btn contacts__btn js-scrollTo" href="#" data-scroll=".callback">Заказать звонок       </a>
         </div>
       </div>
-    </div>
-    <div class="footer"> 
+    </section>
+    <footer class="footer"> 
       <div class="container">
         <div class="footer__row">
           <div class="footer__col"><img class="footer__logo" src="assets/media/img/logo.png" alt=""/>
@@ -318,7 +343,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </footer>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ca918320-3a18-406b-a4cd-c9f4ee2acd55&amp;lang=ru_RU" type="text/javascript"></script>
     <script src="assets/js/scripts-min.js"></script>
   </body>
