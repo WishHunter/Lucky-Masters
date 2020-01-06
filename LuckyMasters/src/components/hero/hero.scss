@@ -35,7 +35,7 @@
     &__nav {
         position: absolute;
         left: 50%;
-        bottom: 250px;
+        bottom: 220px;
         transform: translateX(-50%);
         height: 30px;
         z-index: 11;
@@ -67,7 +67,7 @@
 
     &__pagination {
         left: 50%;
-        top: 50px;
+        top: 35px;
         transform: translateX(-50%);
         
         .swiper-pagination-bullet {

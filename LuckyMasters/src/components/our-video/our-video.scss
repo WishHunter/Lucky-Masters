@@ -20,7 +20,11 @@
         display: none;
         @media (max-width: $desktop) {
             display: block;
-            bottom: -30px;
+            bottom: 65px;
+        }
+
+        @media (max-width: $tablet) {
+            bottom: -45px;
         }
     }
 

@@ -17,7 +17,7 @@ mixin selection()
                         .selection__tab-content.js-tab-active(id=val)
                             .swiper-wrapper.selection__tab-wrapper
                                 each prod in $i18n.product[val]
-                                    a.swiper-slide.selection__product(href="#")
+                                    a.swiper-slide.selection__product(href="catalog.html")
                                         .selection__product-back
                                             img.selection__product-img(src=$img+prod[0], alt="")
                                         p.selection__product-text #{prod[1]}
@@ -29,7 +29,7 @@ mixin selection()
                         .selection__tab-content(id=val)
                             .swiper-wrapper.selection__tab-wrapper
                                 each prod in $i18n.product[val]
-                                    a.swiper-slide.selection__product(href="#")
+                                    a.swiper-slide.selection__product(href="catalog.html")
                                         .selection__product-back
                                             img.selection__product-img(src=$img+prod[0], alt="")
                                         p.selection__product-text #{prod[1]}

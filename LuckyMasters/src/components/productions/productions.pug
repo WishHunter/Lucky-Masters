@@ -1,0 +1,48 @@
+mixin productions()
+    section.productions
+        .container
+            h2.productions__header Продукция
+            .productions__flex
+                a.productions__menu-mobile.js-productions__menu-mobile(href="#") Каталог продукции
+                .productions__nav
+                    ul.productions__nav-list
+                        a.productions__menu-mobile-close.js-close-menu(href="#")
+                            span
+                            span
+                        each item in $i18n.catalog
+                            li.productions__nav-item
+                                a.productions__nav-link.js-link-catalog(href="" data-class="."+item.className) #{item.name}
+                                if item.subcatalog
+                                    ul.productions__nav-sublist
+                                        each subitem in item.subcatalog
+                                            li.productions__nav-subitem
+                                                a.link.productions__nav-sublink.js-link-catalog(href="#" data-class="."+item.className+"__"+subitem.className) 
+                                                    span.link__text #{subitem.name}
+
+                .productions__content
+                    each item in $i18n.catalog
+                        div.productions__content-list(class=item.className)
+                            h3.productions__content-header #{item.name}
+                            if item.subcatalog
+                                each subitem in item.subcatalog
+                                    div.productions__content-sublist(class= item.className+"__"+subitem.className)
+                                        h3.productions__content-header #{subitem.name}
+                                        each product in subitem.products
+                                            div.productions__product(class=product.id)
+                                                img.productions__product-img(src=$img+product.photo, alt="")
+                                                .productions__product-content
+                                                    h5.productions__product-header #{product.name}
+                                                    p.productions__product-desc #{product.desc}
+                                                    .productions__product-btn-block
+                                                        a.btn.btn--dark.productions__product-btn-more.js-btn-moreDetails(href="#") Подробнее
+                                                        a.btn.btn--border.productions__product-btn-consult(href="#") Бесплатная консультация
+                            else 
+                                each product in item.products
+                                    div.productions__product(class=product.id)
+                                        img.productions__product-img(src=$img+product.photo, alt="")
+                                        .productions__product-content
+                                            h5.productions__product-header #{product.name}
+                                            p.productions__product-desc #{product.desc}
+                                            .productions__product-btn-block
+                                                a.btn.btn--dark.productions__product-btn-more.js-btn-moreDetails(href="#") Подробнее
+                                                a.btn.btn--border.productions__product-btn-consult(href="#") Бесплатная консультация

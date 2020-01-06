@@ -139,11 +139,12 @@ gulp.task('watch', function () {
     gulp.watch('./src/**/*.scss', gulp.parallel('sass'));
     gulp.watch('./src/**/*.pug', gulp.parallel('rebuild'));
     gulp.watch('./src/**/*.js', gulp.parallel('js'));
+    gulp.watch('./src/**/*.svg', gulp.parallel('svg'));
     gulp.watch(['./src/**/*.png', 'src/**/*.jpg'], gulp.parallel('img'));
     browserSync.reload();
 });
 
 // Build task compile sass and twig.
-gulp.task('build', gulp.series('webp', 'svg', 'sass', 'pug', 'js', 'img'));
+gulp.task('build', gulp.series('webp', 'sass', 'pug', 'js', 'img', 'svg'));
 
 gulp.task('default', gulp.parallel('browser-sync', 'watch'));

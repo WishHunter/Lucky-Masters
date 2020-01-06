@@ -3,7 +3,7 @@ mixin footer()
         .container
             .footer__row
                 .footer__col
-                    img.footer__logo(src=$img+"logo.png", alt="")
+                    img.footer__logo(src=$img+"logo-light.png", alt="")
                     p.footer__small Copyright ООО «Лаки Мастерс НН» 2019
 
                     a.link.footer__policy(href="#") 
@@ -11,13 +11,20 @@ mixin footer()
                 .footer__col
                     -var items = ['меню', 'О компании', 'Подбор оборудования', 'Каталог', 'Новости', 'Галерея', 'Контакты']
                     ul.footer__list
-                        for item, index in items
-                            if index == 0
-                                li.footer__item
-                                    p.footer__list-header #{item}
-                            else        
-                                li.footer__item
-                                    a.footer__link(href="#") #{item}
+                        li.footer__item
+                            p.footer__list-header меню
+                        li.footer__item
+                            a.footer__link(href="index.html") О компании
+                        li.footer__item
+                            a.footer__link(href="#") Подбор оборудования
+                        li.footer__item
+                            a.footer__link(href="catalog.html") Каталог
+                        li.footer__item
+                            a.footer__link(href="#") Новости
+                        li.footer__item
+                            a.footer__link(href="gallery.html") Галерея
+                        li.footer__item
+                            a.footer__link(href="contacts.html") Контакты                       
                 .footer__col
                     -var items = ['Каталог оборудования', 'Фасовка', 'Упаковка', 'Автоматизация']
                     ul.footer__list
@@ -27,5 +34,5 @@ mixin footer()
                                     p.footer__list-header #{item}
                             else        
                                 li.footer__item
-                                    a.footer__link(href="#") #{item}                    
+                                    a.footer__link(href="catalog.html") #{item}                    
                             

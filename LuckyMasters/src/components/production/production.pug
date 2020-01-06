@@ -8,7 +8,7 @@ mixin products(section_name)
 				- var items = ['Ленточные','Шлюзовые','Шнековые','Цепные','Затариватели']
 				.products__list
 					each item in items
-						a.link.products__item(href="#") 
+						a.link.products__item(href="catalog.html") 
 							span.link__text #{item}	
 
 			li.flex-block__item.products__advantage 
@@ -18,7 +18,7 @@ mixin products(section_name)
 				- var items = ['Ленточные','Цепные','Для отведения мешков']
 				.products__list
 					each item in items
-						a.link.products__item(href="#") 
+						a.link.products__item(href="catalog.html") 
 							span.link__text #{item}	
 
 			li.flex-block__item.products__advantage 
@@ -28,7 +28,7 @@ mixin products(section_name)
 				- var items = ['Крановые','Напольные','Платформенные и складские',]
 				.products__list
 					each item in items
-						a.link.products__item(href="#") 
+						a.link.products__item(href="catalog.html") 
 							span.link__text #{item}	
 
 			li.flex-block__item.products__advantage 
@@ -38,7 +38,7 @@ mixin products(section_name)
 				- var items = ['Настольные','Импульсные']
 				.products__list
 					each item in items
-						a.link.products__item(href="#") 
+						a.link.products__item(href="catalog.html") 
 							span.link__text #{item}										
 
 mixin production()
@@ -48,4 +48,4 @@ mixin production()
 			+products(production__prod)
 			.production__btns
 				a.btn.btn--dark.production__btn(href="#") Скачать прайс
-				a.btn.btn--border.production__btn(href="#") Смотреть весь каталог
+				a.btn.btn--border.production__btn(href="catalog.html") Смотреть весь каталог

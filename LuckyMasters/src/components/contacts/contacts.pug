@@ -1,25 +1,31 @@
 mixin contacts()
-	section.contacts
-		.container.contacts__container
-			.contacts__map#contacts__map
-			.contacts__block-contact
-				p.contacts__adress 
-					| ООО ПК «Лаки Мастерс НН»
-					br
-					| Юр. адрес: 607684, Нижегородская область,
-					br
-					| Кстовский район, д. Крутая, ул. Приозёрная, дом 1а
-				a.link.contacts__email(href='#')
-					svg.link__icon
-						use(xlink:href= $img + "sprite.svg#email")
-					span.link__text LuckyMasters@mail.ru
-				.contacts__numbers
-					a.contacts__number(href='#')
-						svg.link__icon(width='17px' height='18px')
-							use(xlink:href= $img + "sprite.svg#phone-call")
-						span 8 920 042-25-88
-					a.contacts__number(href='#') 
-						svg.link__icon(width='17px' height='18px')
-							use(xlink:href= $img + "sprite.svg#phone-call")
-						span 8 831 283-03-49
-				a.btn.contacts__btn.js-scrollTo(href="#" data-scroll=".callback") Заказать звонок       
+  section.contacts
+    .container
+      .contacts__flex
+        .contacts__block-text
+          h2.contacts__header Контакты
+          ul.contacts__list
+            li.contacts__item
+              svg.link__icon.contacts__icon
+                use(xlink:href= $img + "sprite.svg#location")
+              p.contacts__text Ждем Вас по адресу:
+              a.contacts__link(href="https://yandex.ru/maps/?pt=44.08,56.20&z=15&l=map") 607684, Нижегородская область, Кстовский район, д. Крутая, ул. Приозёрная, дом 1а
+            li.contacts__item
+              svg.link__icon.contacts__icon
+                use(xlink:href= $img + "sprite.svg#phone-call")
+              p.contacts__text Звоните:
+              .contacts__block-links
+                a.contacts__link(href="tel:+79200422588") 8 920 042-25-88
+                a.contacts__link(href="tel:+78312830349") 8 831 283-03-49
+            li.contacts__item
+              svg.link__icon.contacts__icon
+                use(xlink:href= $img + "sprite.svg#email")
+              p.contacts__text Пишите:
+              a.contacts__link(href="mailto:LuckyMasters@mail.ru") LuckyMasters@mail.ru
+
+          h2.contacts__header Реквизиты
+          p.text.contacts__text ООО «Лаки Мастерс НН»
+          p.text.contacts__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi provident expedita explicabo quo fugit, nesciunt laudantium in enim cupiditate quos aliquam assumenda, hic sequi, commodi veritatis ut reiciendis consequatur excepturi.
+
+        .contacts__block-map
+          .contacts__map#contacts__map

@@ -1,8 +1,16 @@
 mixin nav()
     section.nav
         .container
-            - var menu=['О компании', 'Подбор по продукту','Каталог','Новости','Галерея','Контакты']
             ul.nav__list
-                each link in menu
-                    li.nav__item
-                        a.nav__link(href='#')= link
+                li.nav__item
+                    a.nav__link(href='index.html') О компании
+                li.nav__item
+                    a.nav__link(href='#') Подбор по продукту
+                li.nav__item
+                    a.nav__link(href='catalog.html') Каталог
+                li.nav__item
+                    a.nav__link(href='#') Новости
+                li.nav__item
+                    a.nav__link(href='gallery.html') Галерея
+                li.nav__item
+                    a.nav__link(href='contacts.html') Контакты    

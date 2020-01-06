@@ -1,0 +1,94 @@
+.main-contacts {
+    position: relative;
+    &__map, &__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .ymaps-2-1-75-map {
+        @media (max-width: $tablet) {
+            height: 100% !important;
+        }
+    }
+    &__container {
+        position: static;
+        padding: 90px 0;
+
+        @media (max-width: $tablet) {
+            padding: 0 0 285px;
+        }
+    }
+
+    &__block-contact {
+        position: relative;
+        padding: 40px;
+        border-radius: 10px;
+        background-color: transparentize($color-m, .1);
+        width: 545px;
+
+        @media (max-width: $tablet) {
+            width: calc(100% - 20px);
+            margin-left: 10px;
+            padding: 10px 20px;
+        }
+    }
+
+    &__adress {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    &__email {
+        font-size: 16px;
+        color: $color-light;
+        transition: all .2s ease-out;
+
+        .link__icon {
+            position: relative;
+            bottom: -5px;
+        }
+
+        &:hover {
+            color: $color-m-light;
+        }
+    }
+
+    &__numbers {
+        margin: 15px 0;
+    }
+
+    &__number {
+        font-size: 19px;
+        font-weight: bold;
+        color: $color-light;
+        text-decoration: none;
+        margin-right: 10px;
+        transition: all .2s ease-out;
+
+        .link__icon {
+            margin-top: -5px;
+        }
+        @media (max-width: $tablet) {
+            display: block;
+        }
+
+        &:hover {
+            color: $color-m-light;
+        }
+    }
+
+    .link__icon {
+        fill: $color-m-light;
+    }
+
+    &__btn {
+        padding: 10px;
+        width: auto;
+        display: inline-block;
+        margin-left: 30px;
+    }
+}

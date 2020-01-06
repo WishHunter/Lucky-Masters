@@ -1,17 +1,17 @@
 mixin header()
 	header.header
 		.container.header__content
-			a.header__logo(href='#')
+			a.header__logo(href='index.html')
 				img.header__logo-img(src=$img +"logo.png", alt="LM")
-			a.link.header__email(href='#')
+			a.link.header__email(href='mailto:LuckyMasters@mail.ru')
 				svg.link__icon
 					use(xlink:href= $img + "sprite.svg#email")
 				span.link__text LuckyMasters@mail.ru
-			a.header__number(href='#')
+			a.header__number(href='tel:+79200422588')
 				svg.link__icon(width='17px' height='18px')
 					use(xlink:href= $img + "sprite.svg#phone-call")
 				span 8 920 042-25-88
-			a.header__number(href='#') 
+			a.header__number(href='tel:+78312830349') 
 				svg.link__icon(width='17px' height='18px')
 					use(xlink:href= $img + "sprite.svg#phone-call")
 				span 8 831 283-03-49
