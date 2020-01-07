@@ -70,15 +70,16 @@
         transition: all .2s ease-out;
 
         &::after {
-            content: '>';
+            content: '';
             display: inline-block;
-            margin-left: 10px;
-            color: $color-m;
-
-            @media (max-width: $desktop) {
-                margin-left: 5px;
-                vertical-align: middle;
-            }
+        	width: 7px;
+            height: 13px;
+            margin-left: 5px;
+            background-image: url($img+'arrow_right.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+			vertical-align: middle;
         }
     }
 

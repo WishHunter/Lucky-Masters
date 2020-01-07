@@ -86,14 +86,13 @@
 		&::after {
 			content: '';
 			display: inline-block;
-        	width: 13px;
-        	height: 7px;
+        	width: 7px;
+			height: 13px;
 			margin-left: 5px;
-			background-image: url($img+'arrow_down.png');
+			background-image: url($img+'arrow_right.png');
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: cover;
-			transform: rotate(-90deg);
 			vertical-align: middle;
 		}
 

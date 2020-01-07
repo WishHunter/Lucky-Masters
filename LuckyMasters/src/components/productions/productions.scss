@@ -108,18 +108,19 @@
       transition: all .2s ease-in;
 
       &::after {
-        content: '>';
+        content: '';
         display: inline-block;
-        margin-left: 10px;
-        color: $color-m;
-        vertical-align: middle;
-  
-        @media (max-width: $desktop) {
-          margin-left: 0;
-        }
+        width: 7px;
+        height: 13px;
+        margin-left: 5px;
+        background-image: url($img+'arrow_right.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+			  vertical-align: middle;
 
         @media (max-width: $tablet) {
-          color: $color-light;
+          display: none;
         }
       }
 
