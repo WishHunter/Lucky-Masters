@@ -2,11 +2,19 @@ mixin slider(section_name)
 	div(class=section_name).slider
 
 		.swiper-wrapper.slider__wraper
-			- for (var x = 1; x < 4; x++)
-				.swiper-slide.slider__slide(class='slider__slide--' + x)
-					.container 
-						p.h1-style.slider__header Производство и поставка фасовочного оборудования собственной разработки
-						a.btn.slider__btn(href='') Скачать прайс		
+			.swiper-slide.slider__slide.slider__slide--1
+				.container 
+					p.h1-style.slider__header Производство и поставка фасовочного оборудования собственной разработки
+					a.btn.slider__btn.js-open-popup(href='#' data-id='#popup-callback') Получить КП	
+			.swiper-slide.slider__slide.slider__slide--2
+				.container 
+					p.h1-style.slider__header Оборудование для фасовки и упаковки пищевых продуктов
+					a.btn.slider__btn.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+			.swiper-slide.slider__slide.slider__slide--3
+				.container 
+					p.h1-style.slider__header Оборудование для фасовки и упаковки сыпучих продуктов и строительных материалов
+					a.btn.slider__btn.js-open-popup(href='#' data-id='#popup-callback') Получить КП	
+
 		.container.slider__nav
 			.swiper-pagination.slider__pagination
 			.swiper-button-prev.slider-btn-prev

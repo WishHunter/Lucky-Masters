@@ -1,0 +1,15 @@
+mixin popup-callback()
+    .popup-callback__bg#popup-callback
+        .popup-callback
+            a.popup-callback__close.js-close-popup(href="#" data-id='#popup-callback')
+                span
+                span
+            h2 Оставьте, пожалуйста, ваш e-mail или номер телефона
+            p.popup-callback__text наш менеджер свяжется с вами для отправки прайса и уточнения деталей
+            form.popup-callback__form(method='post' action="")
+                input.popup-callback__input(type="text" placeholder="Ваше имя")      
+                input.popup-callback__input(type="phone" placeholder="Номер телефона")
+                input.popup-callback__input(type="text" placeholder="E-mail")
+                button.btn.popup-callback__btn Получить прайс
+            a.link.popup-callback__privacy(href="#") 
+                span.link__text Политика конфиденциальности

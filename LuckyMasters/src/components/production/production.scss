@@ -1,9 +1,6 @@
 .production {
     padding: 60px 0;
 
-    @media (max-width: $tablet) {
-        border-top: 2px solid transparentize($color-m-light, .85);
-    }
 
     &__btns {
         display: flex;

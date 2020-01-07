@@ -4,28 +4,28 @@ mixin articles(section_name)
 			li.flex-block__item.articles__advantage 
 				img.articles__img(src=$img+"article1.png", alt="")
 				p.articles__header Популярные отраслевые решения
-				- var items = ['Заводы по производству сухих смесей','Пищевое производство','Рециклинг бетона']
+				- var items = ['Заводы по производству сухих смесей','Пищевое производство']
 				.articles__list
 					each item in items
-						a.link.articles__item(href="#") 
+						a.link.articles__item(href="news.html") 
 							span.link__text #{item}	
 
 			li.flex-block__item.articles__advantage 
 				img.articles__img(src=$img+"article2.png", alt="")
 				p.articles__header Общие сведения о различных видах материалов
-				- var items = ['Твердость материалов по шкале Мооса','Насыпные плотности сыпучих материалов','Коэффициенты трения']
+				- var items = ['Твердость материалов по шкале Мооса','Насыпные плотности сыпучих материалов']
 				.articles__list
 					each item in items
-						a.link.articles__item(href="#") 
+						a.link.articles__item(href="news.html") 
 							span.link__text #{item}	
 
 			li.flex-block__item.articles__advantage 
 				img.articles__img(src=$img+"article3.png", alt="")
 				p.articles__header Госты и техническая документация
-				- var items = ['ГОСТ 22688-77 Известь строительная','ГОСТ 8736-93 Песок для строительных работ','ГОСТ 6937-91 Дробилки конусные',]
+				- var items = ['ГОСТ 22688-77 Известь строительная','ГОСТ 8736-93 Песок для строительных работ']
 				.articles__list
 					each item in items
-						a.link.articles__item(href="#") 
+						a.link.articles__item(href="news.html") 
 							span.link__text #{item}	
 
 mixin information()
@@ -33,4 +33,4 @@ mixin information()
 		.container
 			h2 Полезная информация
 			+articles('information__articles')
-			a.btn.btn--border.information__btn(href="#") Больше статей
+			a.btn.btn--border.information__btn(href="news.html") Больше статей

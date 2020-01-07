@@ -1,0 +1,25 @@
+mixin news()
+    section.news
+        .container
+            h2.news__header Новости и статьи
+            .news__flex
+                a.news__menu-mobile.js-news__menu-mobile(href="#") Список статей
+                .news__nav
+                    ul.news__nav-list
+                        each item in $i18n.news
+                            li.news__nav-item
+                                p.news__nav-header #{item.groupName}
+                                ul.news__nav-sublist
+                                    each subitem in item.group
+                                        li.news__nav-subitem
+                                            a.link.news__nav-link.js-link-news(href="#" data-id="#"+subitem.id) 
+                                                span.link__text #{subitem.name}
+
+                .news__content
+                    each item in $i18n.news
+                        each subitem in item.group
+                            div.news__article(id=subitem.id)
+                                h3.news__article-header #{subitem.name}
+                                p.text.news__article-text !{subitem.text1}
+                                img.news__article-img(src=$img+subitem.photo, alt="")
+                                p.text.news__article-text !{subitem.text2}

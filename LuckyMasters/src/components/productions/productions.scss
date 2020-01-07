@@ -1,7 +1,8 @@
 .productions {
+  margin-top: 50px;
+  margin-bottom: 60px;
 
   @media (max-width: $tablet) {
-    padding-top: 50px;
     background-color: $color-light;
   }
 
@@ -18,6 +19,7 @@
   &__flex {
     display: flex;
     align-items: flex-start;
+    position: relative;
 
     @media (max-width: $tablet) {
       flex-direction: column;
@@ -53,41 +55,15 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-
       }
-    }
-  }
 
+      &.nav-open {
+        background-color: $color-m-dark;
 
-  &__menu-mobile-close {
-    display: none;
-    
-    @media (max-width: $tablet) {
-      display: block;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      width: 25px;
-      height: 18px;
-      
-      span {
-				position: absolute;
-				left: 0;
-				width: 100%;
-				height: 2px;
-				background-color: $color-m;
-				transition: all .2s ease-out;
-
-				&:nth-of-type(1) {
-					top: calc(50% - 1px);
-					transform: rotate(-45deg);
-				}
-
-				&:nth-of-type(2) {
-					bottom: calc(50% - 1px);
-						transform: rotate(45deg);
-				}
-			}
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 
@@ -100,23 +76,23 @@
 
     @media (max-width: $tablet) {
       max-width: none;
-      width: 100%;
-      height: 100vh;
-      left: 0;
-      top: 0;
-      transform: translateX(-100%);
-      position: fixed;
-      background-color: $color-light;
-      padding: 10px;
-      z-index: 200;
-      opacity: 0;
-      transition: all .2s ease-out;
-      overflow: auto;
-
-      &.nav-open {
-        transform: none;
-        opacity: 1;
-      }
+			width: 100%;
+			left: 0;
+			top: 50px;
+			transform: scaleY(0);
+			transform-origin: top center;
+			position: absolute;
+			background-color: $color-m;
+			padding: 10px;
+			z-index: 200;
+			opacity: 0;
+			transition: all .2s ease-out;
+			overflow: auto;
+	
+			&.nav-open {
+				transform: none;
+				opacity: 1;
+			}
     }
 
     &-item {
@@ -141,15 +117,33 @@
         @media (max-width: $desktop) {
           margin-left: 0;
         }
+
+        @media (max-width: $tablet) {
+          color: $color-light;
+        }
       }
 
       &:hover {
         color: $color-m;
       }
+
+      @media (max-width: $tablet) {
+        color: $color-light;
+        font-size: 16px;
+
+        &:hover {
+          color: $color-m-gray;
+        }
+      }
     }
 
     &-sublink {
       font-size: 16px; 
+
+      @media (max-width: $tablet) {
+        color: $color-light;
+        font-size: 12px;
+      }
     }
   }
 

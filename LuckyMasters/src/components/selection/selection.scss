@@ -1,90 +1,25 @@
 .selection {
 	padding: 100px 0 70px;
 
-	&__tabs-header {
-		display: flex;
-		margin-top: 40px;
-		width: auto;
-		justify-content: center;
+	@media (max-width: $tablet) {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			left: 10px;
+			bottom: 0;
+			width: calc(100% - 20px);
+			height: 2px;
+			background-color: transparentize($color-m-light, .85);;
+		}
 	}
 
-	&__tabs-body {
-		margin-top: 50px;
-	}
-
-	&__tab {
-		padding: 0 5px;
-
-		&-link {
-			font-size: 16px;
-			color: $color-m;
-			line-height: 1.2;
-			padding: 10px 20px;
-			transition: all .2s ease-in;
-			position: relative;
-			text-decoration: none;
-
-			@media (max-width: $tablet) {
-				font-size: 12px;
-				padding: 10px;
-			}
-
-			&:after {
-				content: '';
-				position: absolute;
-				left: 20px;
-				bottom: 7px;
-				width: calc(100% - 40px);
-				height: 1px;
-				border-bottom: 1px dashed $color-m;
-
-				@media (max-width: $tablet) {
-					left: 10px;
-					width: calc(100% - 20px);
-				}
-			}
-
-			&.js-tab-active, &:hover {
-				color: $color-dark;
-				background-color: transparentize($color-m-light, .8);
-				border-radius: 4px;
-				
-				&:after {
-					border: none;
-				}
-			}
-		}
-		&-content {
-			display: none;
-			
-			&.js-tab-active {
-				display: block;
-			}
-			@media (max-width: $tablet) {
-				overflow: hidden;
-				position: relative;
-			}
-		}
-		
-		&-wrapper {
-			display: flex;
-			justify-content: space-around;
-			@media (max-width: $tablet) {
-				justify-content: flex-start;
-				padding-bottom: 60px;
-			}
-		}
-
-		&__pagination,&-btn-prev,&-btn-next {
-			display: none;
-
-			@media (max-width: $tablet) {
-				display: block;
-			}	
-		}
-		&__pagination {
-			bottom: 10px;
-		}
+	&__text {
+		font-size: 18px;
+		text-align: center;
+		color: $color-dark;
+		margin-bottom: 50px;
+		margin-top: 10px;
 	}
 
 	&__product {
@@ -149,19 +84,34 @@
 		font-weight: bold;
 		transition: all .2s ease-in;
 		&::after {
-			content: '>';
+			content: '';
 			display: inline-block;
-			margin-left: 10px;
-			color: $color-m;
+        	width: 13px;
+        	height: 7px;
+			margin-left: 5px;
+			background-image: url($img+'arrow_down.png');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			transform: rotate(-90deg);
 			vertical-align: middle;
-
-			@media (max-width: $desktop) {
-				margin-left: 0;
-			}
 		}
 
 		@media (max-width: $desktop) {
 			font-size: 18px;
 		}
 	}
+
+	&__tab-nav {
+		display: none;
+
+		@media (max-width: $tablet) {
+			display: block;
+		}
+	}
+
+	&__tab-pagination {
+		bottom: -50px;
+	}
+
 }

@@ -2,38 +2,24 @@ mixin selection()
     section.selection
         .container
             h2 Подбор оборудования
-            ul.selection__tabs-header
-                each val, index in $i18n.product.section
-                    if index === 0
-                        li.selection__tab
-                            a.selection__tab-link.js-tab-link.js-tab-active(href="#"+val data-id=val) #{$i18n.product.sectionRUS[index]}
-                    else 
-                        li.selection__tab
-                            a.selection__tab-link.js-tab-link(href="#"+val data-id=val) #{$i18n.product.sectionRUS[index]}
-            
-            .selection__tabs-body
-                each val, index in $i18n.product.section
-                    if index === 0
-                        .selection__tab-content.js-tab-active(id=val)
-                            .swiper-wrapper.selection__tab-wrapper
-                                each prod in $i18n.product[val]
-                                    a.swiper-slide.selection__product(href="catalog.html")
-                                        .selection__product-back
-                                            img.selection__product-img(src=$img+prod[0], alt="")
-                                        p.selection__product-text #{prod[1]}
-                            .selection__tab-nav
-                                .swiper-pagination.selection__tab__pagination
-                                .swiper-button-prev.selection__tab-btn-prev
-                                .swiper-button-next.selection__tab-btn-next
-                    else 
-                        .selection__tab-content(id=val)
-                            .swiper-wrapper.selection__tab-wrapper
-                                each prod in $i18n.product[val]
-                                    a.swiper-slide.selection__product(href="catalog.html")
-                                        .selection__product-back
-                                            img.selection__product-img(src=$img+prod[0], alt="")
-                                        p.selection__product-text #{prod[1]}
-                            .selection__tab-nav
-                                .swiper-pagination.selection__tab__pagination
-                                .swiper-button-prev.selection__tab-btn-prev
-                                .swiper-button-next.selection__tab-btn-next                       
+            p.text.selection__text Для фасовки, упаковки, автоматизации
+
+            .selection__tab-content
+                .swiper-wrapper.selection__tab-wrapper
+                    a.swiper-slide.selection__product(href="#")
+                        .selection__product-back
+                            img.selection__product-img(src=$img+'selection_product1.png', alt="")
+                        p.selection__product-text Пищевые продукты
+                    a.swiper-slide.selection__product(href="#")
+                        .selection__product-back
+                            img.selection__product-img(src=$img+'selection_product2.png', alt="")
+                        p.selection__product-text Сыпучие продукты
+                    a.swiper-slide.selection__product(href="#")
+                        .selection__product-back
+                            img.selection__product-img(src=$img+'selection_product3.png', alt="")
+                        p.selection__product-text Строительные и другие непищевые продукты
+
+                .selection__tab-nav
+                    .swiper-pagination.selection__tab-pagination
+                    .swiper-button-prev.selection__tab-btn-prev
+                    .swiper-button-next.selection__tab-btn-next                       

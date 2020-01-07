@@ -41,7 +41,7 @@
           <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Подбор по продукту</a></li>
           <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Новости</a></li>
+          <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
           <li class="nav__item"><a class="nav__link" href="gallery.html">Галерея</a></li>
           <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты    </a></li>
         </ul>
@@ -94,7 +94,7 @@
             </li>
           </ul>
         </div>
-        <div class="production__btns"><a class="btn btn--dark production__btn" href="#">Скачать прайс</a><a class="btn btn--border production__btn" href="catalog.html">Смотреть весь каталог</a></div>
+        <div class="production__btns"><a class="btn btn--dark production__btn js-open-popup" href="#" data-id="#popup-callback">Получить КП</a><a class="btn btn--border production__btn" href="catalog.html">Смотреть весь каталог</a></div>
       </div>
     </section>
     <footer class="footer"> 
@@ -111,7 +111,7 @@
               <li class="footer__item"><a class="footer__link" href="index.html">Главная</a></li>
               <li class="footer__item"><a class="footer__link" href="#">Подбор оборудования</a></li>
               <li class="footer__item"><a class="footer__link" href="catalog.html">Каталог</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Новости</a></li>
+              <li class="footer__item"><a class="footer__link" href="news.html">Новости</a></li>
               <li class="footer__item"><a class="footer__link" href="gallery.html">Галерея</a></li>
               <li class="footer__item"><a class="footer__link" href="contacts.html">Контакты                       </a></li>
             </ul>
@@ -121,14 +121,26 @@
               <li class="footer__item">
                 <p class="footer__list-header">Каталог оборудования</p>
               </li>
-              <li class="footer__item"><a class="footer__link" href="catalog.html">Фасовка                    </a></li>
-              <li class="footer__item"><a class="footer__link" href="catalog.html">Упаковка                    </a></li>
-              <li class="footer__item"><a class="footer__link" href="catalog.html">Автоматизация                    </a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Пищевые продукты                    </a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Сыпучие продукты                    </a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Строительные и другие непищевые продукты                    </a></li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
+    <div class="popup-callback__bg" id="popup-callback">
+      <div class="popup-callback"><a class="popup-callback__close js-close-popup" href="#" data-id="#popup-callback"><span></span><span></span></a>
+        <h2>Оставьте, пожалуйста, ваш e-mail или номер телефона</h2>
+        <p class="popup-callback__text">наш менеджер свяжется с вами для отправки прайса и уточнения деталей</p>
+        <form class="popup-callback__form" method="post" action="">
+          <input class="popup-callback__input" type="text" placeholder="Ваше имя"/>
+          <input class="popup-callback__input" type="phone" placeholder="Номер телефона"/>
+          <input class="popup-callback__input" type="text" placeholder="E-mail"/>
+          <button class="btn popup-callback__btn">Получить прайс</button>
+        </form><a class="link popup-callback__privacy" href="#"> <span class="link__text">Политика конфиденциальности</span></a>
+      </div>
+    </div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ca918320-3a18-406b-a4cd-c9f4ee2acd55&amp;lang=ru_RU" type="text/javascript"></script>
     <script src="assets/js/scripts-min.js"></script>
   </body>

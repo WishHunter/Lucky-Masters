@@ -9,7 +9,18 @@
     &__slide {
         position: relative;
         padding: 70px 0 250px;
-        background-image: url($img + 'heroSlider1.png');
+        
+        &--1 {
+            background-image: url($img + 'heroSlider1.png');
+        }
+
+        &--2 {
+            background-image: url($img + 'heroSlider2.png');
+        }
+
+        &--3 {
+            background-image: url($img + 'heroSlider3.png');
+        }
 
         @media (max-width: $desktop) {
             padding-left: 20px;

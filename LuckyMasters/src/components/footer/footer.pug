@@ -20,13 +20,13 @@ mixin footer()
                         li.footer__item
                             a.footer__link(href="catalog.html") Каталог
                         li.footer__item
-                            a.footer__link(href="#") Новости
+                            a.footer__link(href="news.html") Новости
                         li.footer__item
                             a.footer__link(href="gallery.html") Галерея
                         li.footer__item
                             a.footer__link(href="contacts.html") Контакты                       
                 .footer__col
-                    -var items = ['Каталог оборудования', 'Фасовка', 'Упаковка', 'Автоматизация']
+                    -var items = ['Каталог оборудования', 'Пищевые продукты', 'Сыпучие продукты', 'Строительные и другие непищевые продукты']
                     ul.footer__list
                         for item, index in items
                             if index == 0

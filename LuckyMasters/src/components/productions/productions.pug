@@ -34,8 +34,7 @@ mixin productions()
                                                     h5.productions__product-header #{product.name}
                                                     p.productions__product-desc #{product.desc}
                                                     .productions__product-btn-block
-                                                        a.btn.btn--dark.productions__product-btn-more.js-btn-moreDetails(href="#") Подробнее
-                                                        a.btn.btn--border.productions__product-btn-consult(href="#") Бесплатная консультация
+                                                        a.btn.btn--dark.productions__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
                             else 
                                 each product in item.products
                                     div.productions__product(class=product.id)
@@ -44,5 +43,4 @@ mixin productions()
                                             h5.productions__product-header #{product.name}
                                             p.productions__product-desc #{product.desc}
                                             .productions__product-btn-block
-                                                a.btn.btn--dark.productions__product-btn-more.js-btn-moreDetails(href="#") Подробнее
-                                                a.btn.btn--border.productions__product-btn-consult(href="#") Бесплатная консультация
+                                                a.btn.btn--dark.productions__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП

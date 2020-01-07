@@ -8,6 +8,7 @@ if (document.querySelector('.productions')) {
         evt.preventDefault();
         catalogOpen(val);
         document.querySelector('.productions__nav').classList.toggle("nav-open");
+        document.querySelector('.js-productions__menu-mobile').classList.toggle("nav-open");
     });
   });
 
