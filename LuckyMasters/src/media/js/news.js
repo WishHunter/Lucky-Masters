@@ -13,9 +13,9 @@ if (document.querySelector('.news')) {
 		});
 	
 		function newsOpen(val) {
-	    document.querySelector('.js-open').classList.remove('js-open');
+	    	document.querySelector('.js-open').classList.remove('js-open');
 			document.querySelector('.js-active-link').classList.remove('js-active-link');
-		  document.querySelector(val.dataset.id).classList.add('js-open');
+		  	document.querySelector(val.dataset.id).classList.add('js-open');
 			val.classList.add('js-active-link');
 		}  
 }

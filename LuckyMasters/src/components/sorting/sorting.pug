@@ -1,0 +1,141 @@
+mixin sorting()
+	section.sorting
+		.container
+			.sorting__header-flex
+				h2.sorting__header Продукция
+				.sorting__filter
+					h2.sorting__filter-header Сортировка по продукту
+					ul.sorting__filter-list
+						li.sorting__filter-item
+							a.sorting__filter-link.js-link-catalog.js-active-link(href="#" data-class=".js-food") Пищевые
+						li.sorting__filter-item
+							a.sorting__filter-link.js-link-catalog(href="#" data-class=".js-loose") Cыпучие
+						li.sorting__filter-item
+							a.sorting__filter-link.js-link-catalog(href="#" data-class=".js-building") Строительные
+			.sorting__flex
+				a.sorting__menu-mobile.js-sorting__menu-mobile(href="#") Каталог продукции
+				.sorting__nav
+					ul.sorting__nav-list
+						li.sorting__nav-item.sorting__nav-filter
+							p.sorting__nav-link Сортировка по продукту
+							ul.sorting__nav-sublist
+								li.sorting__nav-subitem
+									a.link.sorting__nav-sublink.js-link-catalog(href="#" data-class=".js-food")
+										span.link__text Пищевые
+								li.sorting__nav-subitem
+									a.link.sorting__nav-sublink.js-link-catalog(href="#" data-class=".js-loose")
+										span.link__text Cыпучие
+								li.sorting__nav-subitem
+									a.link.sorting__nav-sublink.js-link-catalog(href="#" data-class=".js-building")
+										span.link__text Строительные				
+						each item in $i18n.catalog
+							li.sorting__nav-item
+								a.sorting__nav-link.js-link-catalog(href="#" data-class="."+item.className) #{item.name}
+								if item.subcatalog
+									ul.sorting__nav-sublist
+											each subitem in item.subcatalog
+												li.sorting__nav-subitem
+													a.link.sorting__nav-sublink.js-link-catalog(href="#" data-class="."+item.className+"__"+subitem.className) 
+														span.link__text #{subitem.name}
+				.sorting__content
+					each item in $i18n.catalog
+						div.sorting__content-list(class=item.className)
+							h3.sorting__content-header #{item.name}
+							if item.subcatalog
+								each subitem in item.subcatalog
+									div.sorting__content-sublist(class= item.className+"__"+subitem.className)
+										h3.sorting__content-header #{subitem.name}
+										each product in subitem.products
+											div.sorting__product(class=product.id)
+												img.sorting__product-img(src=$img+product.photo, alt="")
+												.sorting__product-content
+													h5.sorting__product-header #{product.name}
+													p.sorting__product-desc #{product.desc}
+													.sorting__product-btn-block
+														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+							else 
+								each product in item.products
+									div.sorting__product(class=product.id)
+										img.sorting__product-img(src=$img+product.photo, alt="")
+										.sorting__product-content
+											h5.sorting__product-header #{product.name}
+											p.sorting__product-desc #{product.desc}
+											.sorting__product-btn-block
+												a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+
+					div.sorting__content-list.js-open.js-food
+						h3.sorting__content-header Пищевые продукты
+						each item in $i18n.catalog
+							if item.subcatalog
+								each subitem in item.subcatalog
+									each product in subitem.products
+										if product.food
+											div.sorting__product(class=product.id)
+												img.sorting__product-img(src=$img+product.photo, alt="")
+												.sorting__product-content
+													h5.sorting__product-header #{product.name}
+													p.sorting__product-desc #{product.desc}
+													.sorting__product-btn-block
+														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+							else 
+								each product in item.products
+									if product.food
+										div.sorting__product(class=product.id)
+											img.sorting__product-img(src=$img+product.photo, alt="")
+											.sorting__product-content
+												h5.sorting__product-header #{product.name}
+												p.sorting__product-desc #{product.desc}
+												.sorting__product-btn-block
+													a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+					
+					div.sorting__content-list.js-loose
+						h3.sorting__content-header Крупы и сыпучие продукты
+						each item in $i18n.catalog
+							if item.subcatalog
+								each subitem in item.subcatalog
+									each product in subitem.products
+										if product.loose
+											div.sorting__product(class=product.id)
+												img.sorting__product-img(src=$img+product.photo, alt="")
+												.sorting__product-content
+													h5.sorting__product-header #{product.name}
+													p.sorting__product-desc #{product.desc}
+													.sorting__product-btn-block
+														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+							else 
+								each product in item.products
+									if product.loose
+										div.sorting__product(class=product.id)
+											img.sorting__product-img(src=$img+product.photo, alt="")
+											.sorting__product-content
+												h5.sorting__product-header #{product.name}
+												p.sorting__product-desc #{product.desc}
+												.sorting__product-btn-block
+													a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП	
+
+					div.sorting__content-list.js-building
+						h3.sorting__content-header Строительные материалы
+						each item in $i18n.catalog
+							if item.subcatalog
+								each subitem in item.subcatalog
+									each product in subitem.products
+										if product.building
+											div.sorting__product(class=product.id)
+												img.sorting__product-img(src=$img+product.photo, alt="")
+												.sorting__product-content
+													h5.sorting__product-header #{product.name}
+													p.sorting__product-desc #{product.desc}
+													.sorting__product-btn-block
+														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+							else 
+								each product in item.products
+									if product.building
+										div.sorting__product(class=product.id)
+											img.sorting__product-img(src=$img+product.photo, alt="")
+											.sorting__product-content
+												h5.sorting__product-header #{product.name}
+												p.sorting__product-desc #{product.desc}
+												.sorting__product-btn-block
+													a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП																							
+
+					

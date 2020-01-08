@@ -10,8 +10,15 @@
             evn.preventDefault();
             this.classList.toggle("nav-open");
             document.querySelector('.productions__nav').classList.toggle("nav-open");
-        });
-        
+        });  
+    }
+
+    if (document.querySelector('.js-sorting__menu-mobile')) {
+        document.querySelector('.js-sorting__menu-mobile').addEventListener('click', function (evn) {
+            evn.preventDefault();
+            this.classList.toggle("nav-open");
+            document.querySelector('.sorting__nav').classList.toggle("nav-open");
+        });  
     }
 
     if (document.querySelector('.js-news__menu-mobile')) {
