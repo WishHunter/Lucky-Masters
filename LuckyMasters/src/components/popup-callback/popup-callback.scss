@@ -2,6 +2,8 @@
 	position: absolute;
 	width: 100%;
 	max-width: 650px;
+	max-height: 100vh;
+	overflow: auto;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);	
@@ -9,6 +11,10 @@
 	padding: 50px;
 	border-radius: 10px;
 	text-align: center;
+
+	@media (max-width: $tablet) {
+		padding: 20px 10px;
+	}
 
 	&__bg {
 		position: fixed;
@@ -53,6 +59,11 @@
 			span {
 				background-color: $color-m-dark;
 			}
+		}
+
+		@media (max-width: $tablet) {
+			right: 10px;
+			top: 10px;
 		}
 	}
 

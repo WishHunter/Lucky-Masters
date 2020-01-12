@@ -37,7 +37,9 @@ ul {
 }
 
 .btn {
-  display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
   max-width: 280px;
   width: 100%;
   padding: 16px 0;
@@ -72,6 +74,7 @@ ul {
 }
 
 .link {
+	display: inline-block;
   position: relative;
   color: $color-m;
   text-decoration: none;

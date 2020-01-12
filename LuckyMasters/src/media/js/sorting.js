@@ -8,7 +8,8 @@ if (document.querySelector('.sorting')) {
           document.querySelector('.js-sorting__menu-mobile').classList.toggle("nav-open");
       });
     });
-  
+	
+	
     function catalogOpen(val) {
       if (document.querySelector('.js-open')) {
         document.querySelector('.js-open').classList.remove('js-open');
@@ -23,6 +24,10 @@ if (document.querySelector('.sorting')) {
 
       if (document.querySelector(val.dataset.class).classList.contains('sorting__content-sublist')) {
         document.querySelector(val.dataset.class).parentElement.classList.add('js-subopen');
-      }
+			}
+			
+			document.querySelectorAll('.productions__product-subdesc').forEach(function (el) {
+				el.style.height = '';
+			});
     }  
   }

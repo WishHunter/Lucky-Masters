@@ -351,14 +351,34 @@
         font-size: 14px;
         color: $color-dark;
         line-height: 1.2;
-        margin-bottom: 25px;
+        margin-bottom: 10px;
+				font-weight: bold;
   
         @media (max-width: $tablet) {
           font-size: 12px;
           margin-bottom: 15px;
         }
       }
-  
+			
+			&-link-subdesc {
+				margin-bottom: 25px;
+			}
+
+			&-subdesc {
+				height: 0;
+				opacity: 0;
+				overflow: hidden;
+				transition: all .2s ease-out;
+				
+				> * {
+					font-weight: normal;
+				}
+
+				&.js-subdesc-open {
+					opacity: 1;
+				}
+			}
+
       &-btn-block {
         display: flex;
         justify-content: space-between;

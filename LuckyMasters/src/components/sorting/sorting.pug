@@ -51,8 +51,12 @@ mixin sorting()
 												.sorting__product-content
 													h5.sorting__product-header #{product.name}
 													p.sorting__product-desc #{product.desc}
+													.productions__product-subdesc
+															p.productions__product-desc !{product.subdesc}
+													a.link.productions__product-link-subdesc.js-product-subdesc(href="#")
+															span.link__text Подробнее	
 													.sorting__product-btn-block
-														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить коммерческое предложение
 							else 
 								each product in item.products
 									div.sorting__product(class=product.id)
@@ -60,8 +64,12 @@ mixin sorting()
 										.sorting__product-content
 											h5.sorting__product-header #{product.name}
 											p.sorting__product-desc #{product.desc}
+											.productions__product-subdesc
+													p.productions__product-desc !{product.subdesc}
+											a.link.productions__product-link-subdesc.js-product-subdesc(href="#")
+													span.link__text Подробнее	
 											.sorting__product-btn-block
-												a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+												a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить коммерческое предложение
 
 					div.sorting__content-list.js-open.js-food
 						h3.sorting__content-header Пищевые продукты
@@ -75,8 +83,12 @@ mixin sorting()
 												.sorting__product-content
 													h5.sorting__product-header #{product.name}
 													p.sorting__product-desc #{product.desc}
+													.productions__product-subdesc
+															p.productions__product-desc !{product.subdesc}
+													a.link.productions__product-link-subdesc.js-product-subdesc(href="#")
+															span.link__text Подробнее	
 													.sorting__product-btn-block
-														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить коммерческое предложение
 							else 
 								each product in item.products
 									if product.food
@@ -85,8 +97,12 @@ mixin sorting()
 											.sorting__product-content
 												h5.sorting__product-header #{product.name}
 												p.sorting__product-desc #{product.desc}
+												.productions__product-subdesc
+														p.productions__product-desc !{product.subdesc}
+												a.link.productions__product-link-subdesc.js-product-subdesc(href="#")
+														span.link__text Подробнее	
 												.sorting__product-btn-block
-													a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+													a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить коммерческое предложение
 					
 					div.sorting__content-list.js-loose
 						h3.sorting__content-header Крупы и сыпучие продукты
@@ -100,8 +116,12 @@ mixin sorting()
 												.sorting__product-content
 													h5.sorting__product-header #{product.name}
 													p.sorting__product-desc #{product.desc}
+													.productions__product-subdesc
+															p.productions__product-desc !{product.subdesc}
+													a.link.productions__product-link-subdesc.js-product-subdesc(href="#")
+															span.link__text Подробнее	
 													.sorting__product-btn-block
-														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить коммерческое предложение
 							else 
 								each product in item.products
 									if product.loose
@@ -110,8 +130,12 @@ mixin sorting()
 											.sorting__product-content
 												h5.sorting__product-header #{product.name}
 												p.sorting__product-desc #{product.desc}
+												.productions__product-subdesc
+														p.productions__product-desc !{product.subdesc}
+												a.link.productions__product-link-subdesc.js-product-subdesc(href="#")
+														span.link__text Подробнее	
 												.sorting__product-btn-block
-													a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП	
+													a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить коммерческое предложение	
 
 					div.sorting__content-list.js-building
 						h3.sorting__content-header Строительные материалы
@@ -125,8 +149,12 @@ mixin sorting()
 												.sorting__product-content
 													h5.sorting__product-header #{product.name}
 													p.sorting__product-desc #{product.desc}
+													.productions__product-subdesc
+															p.productions__product-desc !{product.subdesc}
+													a.link.productions__product-link-subdesc.js-product-subdesc(href="#")
+															span.link__text Подробнее	
 													.sorting__product-btn-block
-														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП
+														a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить коммерческое предложение
 							else 
 								each product in item.products
 									if product.building
@@ -135,7 +163,11 @@ mixin sorting()
 											.sorting__product-content
 												h5.sorting__product-header #{product.name}
 												p.sorting__product-desc #{product.desc}
+												.productions__product-subdesc
+														p.productions__product-desc !{product.subdesc}
+												a.link.productions__product-link-subdesc.js-product-subdesc(href="#")
+														span.link__text Подробнее	
 												.sorting__product-btn-block
-													a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить КП																							
+													a.btn.btn--dark.sorting__product-btn-more.js-open-popup(href='#' data-id='#popup-callback') Получить коммерческое предложение																							
 
 					

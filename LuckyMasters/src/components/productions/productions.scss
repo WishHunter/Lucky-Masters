@@ -122,6 +122,11 @@
         @media (max-width: $tablet) {
           display: none;
         }
+			}
+			
+			&.js-active-link {
+				color: $color-m;
+				font-weight: bold;
       }
 
       &:hover {
@@ -140,6 +145,15 @@
 
     &-sublink {
       font-size: 16px; 
+
+			&.js-active-link {
+				color: $color-m;
+				font-weight: bold;
+				
+				span:before {
+					display: none;
+				}
+      }
 
       @media (max-width: $tablet) {
         color: $color-light;
@@ -247,7 +261,7 @@
 
     &-img {
       margin-right: 25px;
-      max-width: 300px;
+      max-width: 250px;
 
       @media (max-width: $desktop) {
         max-width: 25%;
@@ -278,13 +292,33 @@
       font-size: 14px;
       color: $color-dark;
       line-height: 1.2;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
+			font-weight: bold;
 
       @media (max-width: $tablet) {
         font-size: 12px;
         margin-bottom: 15px;
       }
-    }
+		}
+		 
+		&-link-subdesc {
+			margin-bottom: 25px;
+		}
+
+		&-subdesc {
+			height: 0;
+			opacity: 0;
+			overflow: hidden;
+			transition: all .2s ease-out;
+			
+			> * {
+				font-weight: normal;
+			}
+
+			&.js-subdesc-open {
+				opacity: 1;
+			}
+		}
 
     &-btn-block {
       display: flex;
